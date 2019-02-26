@@ -8,13 +8,14 @@
 
         public Turbo(float speedBonus) : base(speedBonus)
         {
+            speedBonus = speedBonus * 1.5F;
         }
 
         public override VehicleType Type
         {
             get
             {
-                return VehicleType.None;
+                return VehicleType.Any;
             }
         }
     }

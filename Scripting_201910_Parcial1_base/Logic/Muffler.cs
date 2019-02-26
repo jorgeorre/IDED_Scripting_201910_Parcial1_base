@@ -8,13 +8,14 @@
 
         public Muffler(float speedBonus) : base(speedBonus)
         {
+            speedBonus = speedBonus*1.2F;
         }
 
         public override VehicleType Type
         {
             get
             {
-                return VehicleType.None;
+                return VehicleType.Bike;
             }
         }
     }

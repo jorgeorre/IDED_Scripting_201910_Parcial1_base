@@ -4,17 +4,22 @@
     {
         public Car() : base()
         {
+            if (CurrentPart is Nitro || CurrentPart is Turbo)
+            {
+                Equip(CurrentPart);
+            }
         }
 
         public Car(float _baseMaxSpeed) : base(_baseMaxSpeed)
         {
+            
         }
 
         protected override VehicleType Type
         {
             get
             {
-                return VehicleType.None;
+                return VehicleType.Car;
             }
         }
     }

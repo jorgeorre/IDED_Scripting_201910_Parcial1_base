@@ -4,6 +4,10 @@
     {
         public Bike() : base()
         {
+            if (CurrentPart is Muffler || CurrentPart is Turbo)
+            {
+                Equip(CurrentPart);
+            }
         }
 
         public Bike(float _baseMaxSpeed) : base(_baseMaxSpeed)
@@ -14,7 +18,7 @@
         {
             get
             {
-                return VehicleType.None;
+                return VehicleType.Bike;
             }
         }
     }
