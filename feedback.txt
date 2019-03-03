@@ -1,0 +1,15 @@
+Parcial (2.5/ 5.0)
+	* Los accesores Part.SpeedBonus y Part.Durability siempre retornan 0.
+	* El switch implementado en el constructor de Part no tiene forma de ocurrir nunca, porque Durability jamás tendrá esos valores; además, se describió Durability como un multiplicador del SpeedBonus, por lo que ese caso no satisface el enunciado.
+	* Part.Level siempre será 0, por lo que el switch propuesto nunca se satisface; además no se tiene en cuenta para calcular el SpeedBonus de las partes.
+	* Por qué los constructores de Bike y Car equipan partes? Para eso es el método Vehicle.Equip()
+	* Por qué los constructores de las subclases de Part asignan porcentajes al speedBonus si el enunciado pide que se haga desde el constructor?
+	* Las bonificaciones que dan las partes pueden romper el límite de 0.5x del baseMaxSpeed.
+	* Vehicle.MaxSpeed siempre retorna 0
+	* Vehicle.Equip() no equipa una parte. Modifica el valor de baseMaxSpeed según la parte que entra, pero en ese caso CurrentPart = null siempre.
+	* Nada hace que Vehicle.Level cambie, por lo que el switch en la función Vehicle.Upgrade() nunca ejecutará.
+
+Bonificación (0.0 / 0.5)
+	No se presentó propuesta para la bonificación
+	
+Total: 2.5 / 5.0
